@@ -1,6 +1,6 @@
 *.tmp
 
-# Word temporary
+# Word temporary test
 ~$*.doc*
 
 # Excel temporary
