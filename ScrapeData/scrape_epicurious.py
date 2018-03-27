@@ -10,7 +10,7 @@ browser = Browser('chrome', **executable_path)
 
 
 # load the relevant urls_df to a pandas dataframe
-urls_df = pd.read_csv('csv/urls_df1.csv')
+urls_df = pd.read_csv('csv_urls/urls_df2.csv')
 
 # initialize an empty list to store the recepies
 recepie_list = []
@@ -119,10 +119,10 @@ for url in urls_df['urls']:
 
 
 # export the list of recepies to a pandas dataframe
-receipe_df1 = pd.DataFrame(recepie_list)
+receipe_df2 = pd.DataFrame(recepie_list)
 
 # export the dataframe to a csv
-receipe_df1.to_csv('receipe_df1.csv')
+receipe_df2.to_csv('receipe_df2.csv')
     
     
     
