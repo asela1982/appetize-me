@@ -7,7 +7,7 @@ features such as the number of ingredients, and recipe picture availability. We 
 #### Dataset:
 We scraped approx 6000 recipes currently on Epicurious.com for
 our data set after filtering out recipes with fewer
-than 10 ratings. For scraping, we used the Python libraries Splitner and BeautifulSoup. 
+than 10 reviews. For scraping, we used the Python libraries Splitner and BeautifulSoup. 
 For each recipe, we scraped its ingredients, preparation steps, image source, number of reviews, tags, user ratings and make it again scores, and the titles. The dataset was then stored in a NoSQL MongoDB database in Heroku. 
 
 #### Inspiration:
