@@ -1,6 +1,6 @@
 # MasterChef
 
-#### Project Team:
+#### Project Goals:
 We set to solve three problems: Firstly, we want to predict the quality of a recipe(measured by its rating and make it again score) based on preparation steps as well as few other engineered
 features such as the number of ingredients, and recipe picture availability. We will be using NLP along with pySpark to train the models such as Naive Bayes, and Random Forest. Secondly, we would like to recommend tags based on a clustering algorithm such as k-means. Thirdly, we would use deep learning to recommend recipes based on images and similarity measures such as Cosine or Euclidean.
 
