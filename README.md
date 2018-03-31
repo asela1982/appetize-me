@@ -14,7 +14,6 @@ For each recipe, we scraped its ingredients, preparation steps, image source, nu
 The inspiration for this project was based on Machine Learning
 Final Project posters published online at http://cs229.stanford.edu/projects2016.html.
 
-
 #### Project Team:
 * Tom Berton
 * Stephen Schadt
