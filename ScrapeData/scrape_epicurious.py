@@ -10,13 +10,13 @@ browser = Browser('chrome', **executable_path)
 
 
 # load the relevant urls_df to a pandas dataframe
-urls_df = pd.read_csv('csv_urls/urls_df2.csv')
+urls_df = pd.read_csv('csv_urls/urls_df6.csv')
 
 # initialize an empty list to store the recepies
 recepie_list = []
 
 # loop through each url
-for url in urls_df['urls']:
+for url in urls_df.iloc[2000:,2]:
     browser.visit(url)
     time.sleep(2)
 
@@ -119,10 +119,10 @@ for url in urls_df['urls']:
 
 
 # export the list of recepies to a pandas dataframe
-receipe_df2 = pd.DataFrame(recepie_list)
+receipe_df8 = pd.DataFrame(recepie_list)
 
 # export the dataframe to a csv
-receipe_df2.to_csv('receipe_df2.csv')
+receipe_df8.to_csv('receipe_df8.csv')
     
     
     
