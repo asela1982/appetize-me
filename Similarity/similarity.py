@@ -44,7 +44,7 @@ def get_recipes(sample_str):
     results = df.sort_values(by=['similarity_score','rating','makeitagainscore'],ascending=[False,False,False])[:3]
     
     # extract only the relevant columns
-    results = results[['urls','ingredients_refined','title','rating','similarity_score']]
+    results = results[['urls','ingredients_refined','tags_refined','title','rating','preparation','similarity_score']]
     
     # reset the index
     results = results.reset_index(drop='index')
