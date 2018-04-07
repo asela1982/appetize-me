@@ -4,8 +4,14 @@ var totalFiles = 0;
 var processedCount = 0;
 var images_json_list = [];
 
-// Locate "#preview" DIV and file input for image processing
+// Locate "#preview" DIV and reset button elements
 var $preview = document.querySelector('#preview');
+var $results = document.querySelector('#results');
+var $resultsing = document.querySelector('#results #ingredients');
+var $recipeForm = document.querySelector('#recipe_form');
+var $resetBtn = document.querySelector("#reset");
+var $imageBrowser = document.querySelector("#imagebrowser");
+
 // API key & URL
 api_key = "AIzaSyB1E6Cjq3r3A4LTF6LLwBVRqVb-GIes5o8";
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + api_key;
@@ -22,6 +28,9 @@ $(function () {
   
     // Call function to process files, on form submit
     $('#fileform').on('submit', uploadFiles);
+    
+    // Add an event listener to the reset button
+    $resetBtn.addEventListener("click", resetFiles);
 
     // FOR DEBUGGING ONLY - Call function to generate form submission debug code
     if (DEBUGGING == true) {
@@ -32,6 +41,27 @@ $(function () {
 // Highlight the Files input if they uploaded a file (triggered on element change)
 function highlight() {
     $('input#imagebrowser').css({'font-weight':'bold', 'color': 'green'});
+}
+
+function resetFiles() {
+    // Clear Local storage from previous runs
+    event.preventDefault(); // Prevent the default form post
+    
+    // Clear files input
+    $imageBrowser.value = "";
+
+    // Clear localStorage
+    localStorage.clear();
+
+    // Clear content
+    $preview.innerHTML = "";
+    $resultsing.innerHTML = "";
+    $recipeForm.innerHTML = "";
+
+    // Clear variables
+    totalFiles = 0;
+    processedCount = 0;
+    images_json_list = [];    
 }
 
 /**
@@ -62,12 +92,6 @@ function uploadFiles (event) {
 
                 // Trigger the processFile function after the image is uploaded
                 reader.onloadend = processFile;
-                //reader.onloadend = (function(theFile){
-                //    return function(){
-                //        processFile(theFile,);
-                //    };
-                //});
-
                 reader.onload = (function(theFile){
                     return function(){
                         onLoadHandler(this,theFile);
@@ -80,7 +104,7 @@ function uploadFiles (event) {
         }
 
         // Call image data processing function after 2 seconds
-        setTimeout(function(){ processImageData(); }, 2000);
+        setTimeout(function(){ processImageData(); }, 3000);
     }
 }
 

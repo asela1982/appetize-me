@@ -6,7 +6,7 @@ from Similarity.similarity import get_recipes
 # Debugging variables
 app_debugging = False    # Set to True when debugging the app
 json_debugging = False
-flask_debugging = True  # Set to True when in Flask debug mode (DISABLE BEFORE DEPLOYING LIVE)
+flask_debugging = False  # Set to True when in Flask debug mode (DISABLE BEFORE DEPLOYING LIVE)
 
 # Initialize Flask
 app = Flask(__name__)

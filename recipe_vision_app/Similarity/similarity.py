@@ -25,7 +25,8 @@ def get_recipes(sample_str):
         magB = math.sqrt(sum(c2.get(k, 0)**2 for k in terms))
         return dotprod / (magA * magB)
 
-    # loop through each row and calculate the similarity score
+    # Loop through each row and calculate the similarity score
+    df["similarity_score"] = ""  # Create similarity score column
     for index, row in df.iterrows():
         # Reset value to zero
         row["similarity_score"] = 0
