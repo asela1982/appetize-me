@@ -1,0 +1,159 @@
+/* General styles */
+body {
+    background:#eceaea;
+    font-size:17px; 
+    line-height:26px; 
+    color: rgb(88, 88, 88);
+    font-family: 'Tahoma';
+}
+.h1 { font-size: 5.5em;}
+
+/* Filter box styles */
+.filters li {
+    padding: 10px 5px 10px;
+    list-style:none;
+    margin: 0px;
+}
+.col-md-3.col-sm-12.col-xs-12.sidebar-box {
+    background-color:#fff;    
+    border-top: 2px solid gainsboro;
+    border-left: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro;
+}
+
+.col-md-3 h4 { padding-top: .8em; }
+.col-md-3 ul { font-size: .8em; }
+.col-sm-6 .sidebar-box { margin-top: 1.2em; }
+.sidebar-box ul {margin:0px; padding:0px;}  
+.sidebar-box ul a {font-size:16px; letter-spacing:1px; color:#000;}
+.sidebar-box ul a:hover {list-style:none;text-decoration: none;}
+.sidebar-box h4 { 
+    padding: 0 0 10px 0; 
+    font-size: 20px; 
+    border-bottom: 1px solid gainsboro;
+}
+.col-md-9 img { width: 100%; padding-top: 1.5em; }
+.col-md-9 h5 { padding: 1.5em 0 1em 0; font-style: italic; text-align: center; }
+
+/* Prev / next buttons */
+#buttons { text-align: center; margin-top: .9em;}
+#buttons #prev, #buttons #next {
+    background-color: #f1f1f1;
+    color: black;
+    font-size: .8em;
+    padding: .2em 1.5em .2em 1.5em;
+}
+#buttons #prev.buttonEnabled, #buttons #next.buttonEnabled {
+    background-color: #f1f1f1;
+    color: black;
+    border: 2px outset gainsboro;
+}
+
+#buttons #prev.buttonDisabled, #buttons #next.buttonDisabled {
+    background-color: #eceaea;
+    border: 1px solid gainsboro;
+    color: #bbb;
+}
+
+#buttons #next:hover, #buttons #prev:hover {
+    background-color: #ddd;
+}
+#buttons #prev { margin-right: 1em;}
+/* End Prev / next buttons */
+
+/* Form elements */
+input#datetime { padding-left: 1em; }
+select#city { max-width: 11em; }
+.filter-box .filters .col-md-12 a#reset {
+    float: right;
+    margin-right: 1.1em;
+}
+.filter-box .filters li.buttons {
+    margin-bottom: 1em;
+}
+
+/* Results table */
+.col-md-9.col-sm-12.col-xs-12 table {
+    margin-top: 1em;
+    border: 1px solid gainsboro;
+}
+.col-md-9.col-sm-12.col-xs-12.results {
+    border-top: 2px solid gainsboro;
+    border-right: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro;
+    background-color: #fff;
+}
+
+table tr th, table tr td {
+    font-size: .75em;
+    max-width: 325px;
+}
+
+/* Loading animation */
+#spinner {
+    display: block;
+    background-image: url("../images/loading_spinner.gif");
+    background-size: 150px;
+    background-repeat: no-repeat;
+    position: fixed; 
+    z-index: 2; 
+    width: 50%;
+    height:50%;
+    left: 55%;
+    top: 45%;
+}
+
+/* General small screen styles */
+@media (max-width: 990px) {
+    .col-sm-12.results { border-left: 2px solid gainsboro;}
+    .col-md-9 img { padding-top: 0; }
+}
+
+.imageContainer {
+    width: 223px;
+    float: left;
+    margin-right: 2em;
+}
+
+.imageContainer img {
+    min-height: 250px;
+}
+
+input#imagebrowser {
+    font-size: .8em;
+    font-style: italic;
+}
+
+div#results {
+    clear:both;
+    padding-top: 1em;
+}
+
+div#ingredients {
+    margin-bottom: 1.2em;
+}
+
+div#results #recipetable div.recipe {
+    float: left;
+    padding-right: .5em;
+}
+
+div#results #recipetable table.recipe {
+    width: 94%;
+    margin-bottom: 1.1em;
+    min-height: 232px;
+}
+
+div#results #recipetable table.recipe td {
+    padding: .4em .6em 0 0;
+    vertical-align: top;
+}
+
+div#results #recipetable table.recipe td.heading {
+    padding: .4em .6em 0 .3em;
+    font-weight: bold;
+}
+
+div.ingredientsLabel {
+    padding-bottom: 1em;
+}

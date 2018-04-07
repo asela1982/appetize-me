@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recipe Vision</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>Recipe Vision</h1>
+                <h3>Let our app find your perfect recipe.</h3>
+                <h4>Instructions:</h4>
+                <ul>
+                    <li>Upload up to five (5) images (the more, the better!)</li>
+                    <li>Click "Submit images"</li>
+                    <li>Let our app find your recipe!</li>
+                </ul>  
+            </div>                  
+            <div class="col-md-9">
+                <img style="opacity: .5;" src="images/holiday-spread.jpg" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3 col-sm-12 col-xs-12">               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12 sidebar-box">
+                <div class="filter-box">             
+                    <div class="col-sm-12 col-xs-12">
+                        <h4>Upload images</h4>
+                    </div>  
+                    <div class="col-md-12 col-sm-6 col-xs-12"> 
+                        <form id="fileform" action="">                
+                           <input id="imagebrowser" type="file" onchange="highlight()" multiple>
+                           <br />
+                           <input type="submit" name="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12 results">
+                <div id="preview"></div>
+                <div id="results">
+                    <div id="ingredients"></div>
+                    <form method="post" id="recipe_form" action="/recipegenerator">
+                    </form>
+                </div>                       
+                <br />
+            </div> 
+        </div>       
+      </div>
+      <script src="js/parseimages.js" type="text/javascript"></script>            
+</body>
+
+</html>
+       
